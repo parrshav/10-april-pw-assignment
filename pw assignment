@@ -1,0 +1,54 @@
+Naïve bayes-2Assignment Questions 
+Assignment 
+Q1. A company conducted a survey of its employees and found that 70% of the employees use the  company's health insurance plan, while 40% of the employees who use the plan are smokers. What is the  probability that an employee is a smoker given that he/she uses the health insurance plan? 
+I apologize for the confusion. Let's correct this.
+Out of 100 employees:
+70 use insurance  P(H)), so P(H)=70/100
+Among these 70 insurance users, 40 are smokers, so P(S∩H), the probability of an employee being both a smoker and an insurance user, is P(S∩H)=40/70
+We want to calculate
+P(S∩H), the probability that an employee is both a smoker and uses insurance:
+P(S∩H)=P(S∣H)×P(H)
+            =(40/70)*0.7
+            =0.28 or 28%
+
+Q2. What is the difference between Bernoulli Naive Bayes and Multinomial Naive Bayes?
+Bernoulli Naive Bayes:
+Bernoulli Naive Bayes is designed for binary feature vectors, where each feature is binary (0 or 1).
+It's commonly used for document classification tasks where the presence or absence of a term (word) is important, but the frequency of the term is not.
+The model assumes that each feature is generated from a Bernoulli distribution.
+The feature vector represents the presence (1) or absence (0) of each feature in the document.
+Multinomial Naive Bayes:
+Multinomial Naive Bayes is suitable for discrete features, often used for text classification.
+It's designed for features that represent counts or frequencies (e.g., word counts in a document).
+The model assumes that the features follow a multinomial distribution (a generalization of the binomial distribution for multiple categories).
+Each feature is typically a non-negative integer count (e.g., the number of occurrences of a word in a document).
+
+Q3. How does Bernoulli Naive Bayes handle missing values? 
+In practical terms, when dealing with missing values in a Bernoulli Naive Bayes context, you have a few options:
+Imputation: Replace the missing values with a suitable imputed value. For Bernoulli Naive Bayes, you might choose to impute missing values with the mode (most common value) of the respective feature.
+Deletion: Exclude instances with missing values from the dataset. This might not be ideal if you have a large number of missing values, as it can significantly reduce your dataset.
+Custom Handling: Depending on your specific problem and data, you can devise a custom strategy for handling missing values. This could involve using domain knowledge to impute values or making an informed decision based on the context.
+
+
+Q4. Can Gaussian Naive Bayes be used for multi-class classification? 
+Yes, Gaussian Naive Bayes can be used for multi-class classification. Gaussian Naive Bayes is an extension of the Naive Bayes algorithm that handles continuous numerical features by assuming that the likelihood of the features given the class follows a Gaussian (normal) distribution.
+In the context of multi-class classification, the Gaussian Naive Bayes model can be adapted to handle multiple classes. The algorithm estimates the parameters of Gaussian distribution (mean and variance) for each feature in each class. When making predictions for a new instance, it calculates the probability of the instance belonging to each class based on the Gaussian distribution parameters for that class.
+
+Q5. Assignment: 
+Data preparation: 
+Download the "Spambase Data Set" from the UCI Machine Learning Repository (https://archive.ics.uci.edu/ml/ datasets/Spambase). This dataset contains email messages, where the goal is to predict whether a message  is spam or not based on several input features. 
+Implementation: 
+Implement Bernoulli Naive Bayes, Multinomial Naive Bayes, and Gaussian Naive Bayes classifiers using the  scikit-learn library in Python. Use 10-fold cross-validation to evaluate the performance of each classifier on the  dataset. You should use the default hyperparameters for each classifier. 
+Results: 
+Report the following performance metrics for each classifier: 
+Accuracy 
+Precision 
+Recall 
+F1 score 
+Discussion: 
+Discuss the results you obtained. Which variant of Naive Bayes performed the best? Why do you think that is  the case? Are there any limitations of Naive Bayes that you observed? 
+Conclusion: 
+Summarise your findings and provide some suggestions for future work. 
+Note:  This dataset contains a binary classification problem with multiple features. The dataset is  relatively small, but it can be used to demonstrate the performance of the different variants of Naive  Bayes on a real-world problem.
+Note:  Create your assignment in Jupyter notebook and upload it to GitHub & share that github repository  link through your dashboard. Make sure the repository is public. 
+Data Science Masters 
